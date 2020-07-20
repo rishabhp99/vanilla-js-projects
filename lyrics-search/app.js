@@ -7,11 +7,26 @@ const result = document.getElementById("result");
 const more = document.getElementById("more");
 
 //Search funtion
-
 async function searchSongs(term) {
   const res = await fetch(`${apiURL}/suggest/${term}`);
   const data = await res.json();
-  console.log(data);
+  showData(data);
+}
+
+//Show song results
+function showData(data) {
+  result.innerHTML = `
+  <ul class="songs">
+  ${data.data
+    .map(
+      (song) => `<li>
+  <span><strong>${song.artist.name}</strong> - ${song.title}</span>
+  <button class = "btn" data-artist="${song.artist.name}" data-song = "${song.title}">Get Lyrics</button>
+  </li>`
+    )
+    .join("")}
+  </ul>
+  `;
 }
 
 // Event listeners
