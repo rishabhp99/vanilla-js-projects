@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Ticket Booking System</title>
   </head>
+
   <body>
     <div class="event-container">
       <label>Pick an event</label>
@@ -19,7 +21,7 @@
     <ul class="showcase">
       <li>
         <div class="seat"></div>
-        <small>N/A</small>
+        <small>Available</small>
       </li>
       <li>
         <div class="seat selected"></div>
@@ -27,7 +29,7 @@
       </li>
       <li>
         <div class="seat occupied"></div>
-        <small>occupied</small>
+        <small>Occupied</small>
       </li>
     </ul>
 
@@ -49,7 +51,7 @@
         <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat"></div>
-        <div class="occupied"></div>
+        <div class="seat occupied"></div>
         <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat"></div>
@@ -57,14 +59,14 @@
       </div>
 
       <div class="row">
-        <div class="occupied"></div>
+        <div class="seat occupied"></div>
         <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat"></div>
-        <div class="occupied"></div>
-        <div class="occupied"></div>
-        <div class="occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
       </div>
 
       <div class="row">
@@ -79,8 +81,8 @@
       </div>
 
       <div class="row">
-        <div class="occupied"></div>
-        <div class="occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
         <div class="seat"></div>
         <div class="seat"></div>
         <div class="seat"></div>
@@ -104,7 +106,7 @@
     <p class="text">
       You have selected <span id="count">0</span> seats for a price of $<span
         id="total"
-        >0.</span
+        >0</span
       >
     </p>
     <script src="app.js"></script>
